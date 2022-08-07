@@ -1,32 +1,32 @@
 var gameData = {
-    gold: 0,
-    goldPerClick: 1,
-    goldPerClickCost: 10
+    credits: 0,
+    creditsPerDay: 1,
+    creditsPerDayCost: 10
 }
 
 var savegame = JSON.parse(localStorage.getItem("goldMinerSave"))
 if (savegame !== null) {
     //gameData = savegame
-    document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+    document.getElementById("perDayUpgrade").innerHTML = "Get a better job (Currently Level " + gameData.creditsPerDay + ") Cost: " + gameData.creditsPerDayCost + " Gold"
 }
 
-function mineGold() {
-    gameData.gold += gameData.goldPerClick
-    document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
+function dayTick() {
+    gameData.credits += gameData.creditsPerDay
+    document.getElementById("goldMined").innerHTML = gameData.credits + " Gold Mined"
 }
 
 function buyGoldPerClick() {
-    if (gameData.gold >= gameData.goldPerClickCost) {
-        gameData.gold -= gameData.goldPerClickCost
-        gameData.goldPerClick *= 1
-        gameData.goldPerClickCost *= 2
-        document.getElementById("goldMined").innerHTML = gameData.gold + " Gold Mined"
-        document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
+    if (gameData.credits >= gameData.creditsPerDayCost) {
+        gameData.credits -= gameData.creditsPerDayCost
+        gameData.creditsPerDay *= 1
+        gameData.creditsPerDayCost *= 2
+        document.getElementById("credits").innerHTML = gameData.credits + " Gold Mined"
+        document.getElementById("perDayUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.creditsPerDay + ") Cost: " + gameData.creditsPerDayCost + " Gold"
     }
 }
 
 var mainGameLoop = window.setInterval(function () {
-    mineGold()
+    dayTick()
 }, 1000)
 
 var saveGameLoop = window.setInterval(function () {
