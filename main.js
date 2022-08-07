@@ -27,7 +27,7 @@ function buyGoldPerClick() {
 
 var mainGameLoop = window.setInterval(function () {
     mineGold()
-}, 1)
+}, 10)
 
 var saveGameLoop = window.setInterval(function () {
     localStorage.setItem("goldMinerSave", JSON.stringify(gameData))
