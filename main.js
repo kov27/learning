@@ -27,6 +27,7 @@ function buyGoldPerClick() {
 
 var mainGameLoop = window.setInterval(function () {
     mineGold()
+    buyGoldPerClick()
 }, 10)
 
 var saveGameLoop = window.setInterval(function () {
