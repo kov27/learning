@@ -15,7 +15,7 @@ function dayTick() {
     document.getElementById("credits").innerHTML = gameData.credits + " Credits"
 }
 
-function buyGoldPerClick() {
+function getBetterJob() {
     if (gameData.credits >= gameData.creditsPerDayCost) {
         gameData.credits -= gameData.creditsPerDayCost
         gameData.creditsPerDay *= 1
