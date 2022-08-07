@@ -6,7 +6,7 @@ var gameData = {
 
 var savegame = JSON.parse(localStorage.getItem("goldMinerSave"))
 if (savegame !== null) {
-    gameData = savegame
+    //gameData = savegame
     document.getElementById("perClickUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.goldPerClick + ") Cost: " + gameData.goldPerClickCost + " Gold"
 }
 
