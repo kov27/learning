@@ -1,6 +1,6 @@
 var gameData = {
     gold: 0,
-    goldPerClick: 1,
+    goldPerClick: 2,
     goldPerClickCost: 10
 }
 
