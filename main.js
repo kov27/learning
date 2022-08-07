@@ -21,7 +21,7 @@ function getBetterJob() {
         gameData.creditsPerDay *= 1
         gameData.creditsPerDayCost *= 2
         document.getElementById("credits").innerHTML = gameData.credits + " Gold Mined"
-        document.getElementById("perDayUpgrade").innerHTML = "Upgrade Pickaxe (Currently Level " + gameData.creditsPerDay + ") Cost: " + gameData.creditsPerDayCost + " Gold"
+        document.getElementById("perDayUpgrade").innerHTML = "Get a beter job (Currently Level " + gameData.creditsPerDay + ") Cost: " + gameData.creditsPerDayCost + " Gold"
     }
 }
 
