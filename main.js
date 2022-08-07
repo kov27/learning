@@ -12,7 +12,7 @@ if (savegame !== null) {
 
 function dayTick() {
     gameData.credits += gameData.creditsPerDay
-    document.getElementById("goldMined").innerHTML = gameData.credits + " Gold Mined"
+    document.getElementById("credits").innerHTML = gameData.credits + " Credits"
 }
 
 function buyGoldPerClick() {
